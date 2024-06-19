@@ -65,6 +65,24 @@ app.get('/read', (req, res) => {
   }
 });
 
+// Total submissions endpoint
+app.get('/total', (req, res) => {
+  // Read submissions from db.json
+  let submissions = [];
+  try {
+    submissions = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+  } catch (error) {
+    console.error('Error reading db.json:', error);
+    return res.status(500).json({ message: 'Error reading submissions' });
+  }
+
+  // Calculate total number of submissions
+  const totalSubmissions = submissions.length;
+
+  // Send total submissions count as JSON response
+  res.json({ total: totalSubmissions });
+});
+
 // Start server
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);

@@ -12,5 +12,26 @@
     "phone": "jbhjdaw",
     "github_link": "jhbj",
     "stopwatch_time": "00:00:00"
+  },
+  {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "1234567890",
+    "github_link": "https://github.com/johndoe",
+    "stopwatch_time": "2 minutes"
+  },
+  {
+    "name": "dawdw",
+    "email": "huhu",
+    "phone": "uuhu",
+    "github_link": "ggvg",
+    "stopwatch_time": "00:00:00"
+  },
+  {
+    "name": "p5",
+    "email": "efs",
+    "phone": "fes",
+    "github_link": "fes",
+    "stopwatch_time": "00:00:00"
   }
 ]
