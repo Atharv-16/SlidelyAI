@@ -8,7 +8,7 @@ const body_parser_1 = __importDefault(require("body-parser"));
 const fs_1 = __importDefault(require("fs"));
 const app = (0, express_1.default)();
 const port = 3000;
-const dbPath = 'C:/Users/Asus/Desktop/slidely/db.json'; // Adjust the path as necessary
+const dbPath = './db.json'; // Adjust the path as necessary
 app.use(body_parser_1.default.json());
 // Ping endpoint
 app.get('/ping', (req, res) => {

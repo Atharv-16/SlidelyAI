@@ -4,7 +4,7 @@ import fs from 'fs';
 
 const app = express();
 const port = 3000;
-const dbPath = 'C:/Users/Asus/Desktop/slidely/db.json'; // Adjust the path as necessary
+const dbPath = './db.json'; // Adjust the path as necessary
 
 app.use(bodyParser.json());
 
