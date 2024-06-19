@@ -1,28 +1,59 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var express = require("express");
-var bodyParser = require("body-parser");
-var fs = require('fs');
-var app = express();
-var port = 3000;
-app.use(bodyParser.json());
+const express_1 = __importDefault(require("express"));
+const body_parser_1 = __importDefault(require("body-parser"));
+const fs_1 = __importDefault(require("fs"));
+const app = (0, express_1.default)();
+const port = 3000;
+const dbPath = 'C:/Users/Asus/Desktop/slidely/db.json'; // Adjust the path as necessary
+app.use(body_parser_1.default.json());
 // Ping endpoint
-app.get('/ping', function (req, res) {
+app.get('/ping', (req, res) => {
     res.json({ message: 'pong' });
 });
 // Submit endpoint
-app.post('/submit', function (req, res) {
-    var _a = req.body, name = _a.name, email = _a.email, phone = _a.phone, github_link = _a.github_link, stopwatch_time = _a.stopwatch_time;
-    // Handle submission data, e.g., save to a JSON file or database
-    console.log("Received submission: ".concat(name, ", ").concat(email, ", ").concat(phone, ", ").concat(github_link, ", ").concat(stopwatch_time));
-    res.json({ message: 'Submission received' });
+app.post('/submit', (req, res) => {
+    const { name, email, phone, github_link, stopwatch_time } = req.body;
+    // Log received submission
+    console.log(`Received submission: ${name}, ${email}, ${phone}, ${github_link}, ${stopwatch_time}`);
+    // Read current submissions from db.json
+    let submissions = [];
+    try {
+        const dbData = fs_1.default.readFileSync(dbPath, 'utf8');
+        submissions = JSON.parse(dbData);
+    }
+    catch (error) {
+        console.error('Error reading db.json:', error);
+        return res.status(500).json({ message: 'Error reading db.json' });
+    }
+    // Add new submission to submissions array
+    submissions.push({ name, email, phone, github_link, stopwatch_time });
+    // Write updated submissions back to db.json
+    try {
+        fs_1.default.writeFileSync(dbPath, JSON.stringify(submissions, null, 2));
+        console.log('Submission saved:', { name, email, phone, github_link, stopwatch_time });
+        res.json({ message: 'Submission received and saved' });
+    }
+    catch (error) {
+        console.error('Error writing to db.json:', error);
+        res.status(500).json({ message: 'Error writing to db.json' });
+    }
 });
 // Read endpoint
-app.get('/read', function (req, res) {
-    var index = +req.query.index; // Convert query parameter to number
-    // Implement logic to read submission data based on index
-    // Assuming you have a db.json file with submission data
-    var submissions = require('C:\Users\Asus\Desktop\slidely\db.json');
+app.get('/read', (req, res) => {
+    const index = req.query.index !== undefined ? +req.query.index : -1;
+    // Read submissions from db.json
+    let submissions = [];
+    try {
+        submissions = JSON.parse(fs_1.default.readFileSync(dbPath, 'utf8'));
+    }
+    catch (error) {
+        console.error('Error reading db.json:', error);
+        return res.status(500).json({ message: 'Error reading submissions' });
+    }
     if (index >= 0 && index < submissions.length) {
         res.json(submissions[index]);
     }
@@ -31,6 +62,6 @@ app.get('/read', function (req, res) {
     }
 });
 // Start server
-app.listen(port, function () {
-    console.log("Server running at http://localhost:".concat(port));
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
 });

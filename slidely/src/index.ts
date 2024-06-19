@@ -1,32 +1,63 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-const fs = require('fs');
+import fs from 'fs';
 
 const app = express();
 const port = 3000;
+const dbPath = 'C:/Users/Asus/Desktop/slidely/db.json'; // Adjust the path as necessary
 
 app.use(bodyParser.json());
 
 // Ping endpoint
-app.get('/ping', (req: express.Request, res: express.Response) => {
+app.get('/ping', (req, res) => {
   res.json({ message: 'pong' });
 });
 
 // Submit endpoint
-app.post('/submit', (req: express.Request, res: express.Response) => {
+app.post('/submit', (req, res) => {
   const { name, email, phone, github_link, stopwatch_time } = req.body;
-  // Handle submission data, e.g., save to a JSON file or database
+
+  // Log received submission
   console.log(`Received submission: ${name}, ${email}, ${phone}, ${github_link}, ${stopwatch_time}`);
-  res.json({ message: 'Submission received' });
+
+  // Read current submissions from db.json
+  let submissions = [];
+  try {
+    const dbData = fs.readFileSync(dbPath, 'utf8');
+    submissions = JSON.parse(dbData);
+  } catch (error) {
+    console.error('Error reading db.json:', error);
+    return res.status(500).json({ message: 'Error reading db.json' });
+  }
+
+  // Add new submission to submissions array
+  submissions.push({ name, email, phone, github_link, stopwatch_time });
+
+  // Write updated submissions back to db.json
+  try {
+    fs.writeFileSync(dbPath, JSON.stringify(submissions, null, 2));
+    console.log('Submission saved:', { name, email, phone, github_link, stopwatch_time });
+    res.json({ message: 'Submission received and saved' });
+  } catch (error) {
+    console.error('Error writing to db.json:', error);
+    res.status(500).json({ message: 'Error writing to db.json' });
+  }
 });
 
+
 // Read endpoint
-app.get('/read', (req: express.Request, res: express.Response) => {
-  const index = req.query.index !== undefined ? +req.query.index : -1; // Adjust to your preference
-  // Assuming you have a db.json file with submission data
-  const dbPath = 'C:/Users/Asus/Desktop/slidely/db.json'; // Adjust the path as necessary
-  const submissions = require(dbPath);
-  
+app.get('/read', (req, res) => {
+  const index = req.query.index !== undefined ? +req.query.index : -1;
+
+  // Read submissions from db.json
+  let submissions = [];
+  try {
+    submissions = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+  } catch (error) {
+    console.error('Error reading db.json:', error);
+    return res.status(500).json({ message: 'Error reading submissions' });
+  }
+
   if (index >= 0 && index < submissions.length) {
     res.json(submissions[index]);
   } else {
