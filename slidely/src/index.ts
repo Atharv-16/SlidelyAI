@@ -1,5 +1,5 @@
-import * as express from 'express';
-import * as bodyParser from 'body-parser';
+import express from 'express';
+import bodyParser from 'body-parser';
 const fs = require('fs');
 
 const app = express();
@@ -22,10 +22,11 @@ app.post('/submit', (req: express.Request, res: express.Response) => {
 
 // Read endpoint
 app.get('/read', (req: express.Request, res: express.Response) => {
-  const index = +req.query.index; // Convert query parameter to number
-  // Implement logic to read submission data based on index
+  const index = req.query.index !== undefined ? +req.query.index : -1; // Adjust to your preference
   // Assuming you have a db.json file with submission data
-  const submissions = require('C:\Users\Asus\Desktop\slidely\db.json');
+  const dbPath = 'C:/Users/Asus/Desktop/slidely/db.json'; // Adjust the path as necessary
+  const submissions = require(dbPath);
+  
   if (index >= 0 && index < submissions.length) {
     res.json(submissions[index]);
   } else {
