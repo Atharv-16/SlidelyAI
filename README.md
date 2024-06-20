@@ -1,4 +1,4 @@
-<img width="599" alt="backend" src="https://github.com/Atharv-16/SlidelyAI/assets/119600601/1f674f6d-fb20-431c-9e03-113ea7304a39"># Google Forms Clone
+# Google Forms Clone
 
 This project is a simplified clone of Google Forms, consisting of a frontend built with Visual Basic and a backend built with Express.js.
 
