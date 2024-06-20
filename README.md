@@ -21,37 +21,20 @@ The backend is responsible for handling submissions and providing data to the fr
    cd slidely
 
 2. Build the Project
-If necessary:
-```bash
-npm run build
-```
+   If necessary:
+   ```bash
+   npm run build
+   ```
 3. Start the Server
-```bash
-npm start
-```
-
+   ```bash
+   npm start
+   ```
 The server will start running on http://localhost:3000.
+4. Open Setup
 
-## API Endpoints
-/submissions - GET: Fetches all submissions.
-/submissions/
-- GET: Fetches a specific submission by ID.
-## Environment Variables
-Make sure to set the following environment variables:
-
-PORT - Port number for the server (default: 3000).
-Any other relevant configuration variables (database connection, etc.).
-## Frontend (Visual Basic)
-The frontend is built using Visual Basic and interacts with the backend API to display and manage form submissions.
-
-## Installation
-- Navigate to the GoogleFormsClone folder.
-- Run the setup file named setup to install the application.
-- Ensure all dependencies are installed as per the setup instructions.
-
-## Running the Application
-- Open the Visual Basic project in your preferred IDE (e.g., Visual Studio).
-- Build and run the project to start the frontend application.
+# Frontend (Visual Basic)
+The frontend app is built using Visual Basic and interacts with the backend API to display and manage form submissions.
+GoogleFormsClone folder has been provided as the source code which can be open by Visual Basic.
 ### Features
 - Create New Submission: Allows users to input Name, Email, Phone Number, GitHub repo link, and manage a stopwatch.
 - View Submissions: Navigate through all form entries and view details of each submission.
