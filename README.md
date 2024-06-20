@@ -36,7 +36,7 @@ The server will start running on http://localhost:3000.
 
 ## Frontend (Visual Basic)
 The frontend app is built using Visual Basic and interacts with the backend API to display and manage form submissions.
-GoogleFormsClone folder has been provided as the source code which can be open by Visual Basic.
+GoogleFormsClone folder has been provided as the source code which can be opened by Visual Basic.
 ### Features
 - Create New Submission: Allows users to input Name, Email, Phone Number, GitHub repo link, and manage a stopwatch.
 - View Submissions: Navigate through all form entries and view details of each submission.
