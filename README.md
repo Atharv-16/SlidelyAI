@@ -1,4 +1,3 @@
-# SlidelyAI
 # Google Forms Clone
 
 This project is a simplified clone of Google Forms, consisting of a frontend built with Visual Basic and a backend built with Express.js.
