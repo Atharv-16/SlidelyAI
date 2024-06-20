@@ -28,11 +28,13 @@ The backend is responsible for handling submissions and providing data to the fr
    ```bash
    npm start
    ```
-4. Open Setup
+4. Launch the setup.exe
+
+
 The server will start running on http://localhost:3000.
 
 
-# Frontend (Visual Basic)
+## Frontend (Visual Basic)
 The frontend app is built using Visual Basic and interacts with the backend API to display and manage form submissions.
 GoogleFormsClone folder has been provided as the source code which can be open by Visual Basic.
 ### Features
