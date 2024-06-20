@@ -47,3 +47,7 @@ GoogleFormsClone folder has been provided as the source code which can be open b
 <img width="830" alt="create" src="https://github.com/Atharv-16/SlidelyAI/assets/119600601/005464b2-d267-4be5-95ae-73724005d0f6"><img width="599" alt="backend" src="https://github.com/Atharv-16/SlidelyAI/assets/119600601/b394cbc1-1359-4da6-94ea-9aba53837358">
 <img width="828" alt="view" src="https://github.com/Atharv-16/SlidelyAI/assets/119600601/90a66f77-d2e6-49e1-aba4-9735eb4309f3">
 
+## Demo
+https://github.com/Atharv-16/SlidelyAI/assets/119600601/fc441402-6aee-4de7-ad2f-d2177d273661
+
+
