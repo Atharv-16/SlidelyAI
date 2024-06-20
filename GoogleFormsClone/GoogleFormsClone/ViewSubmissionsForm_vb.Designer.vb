@@ -33,20 +33,20 @@ Partial Class ViewSubmissionsForm_vb
         '
         'btnPrevious
         '
-        Me.btnPrevious.Location = New System.Drawing.Point(477, 88)
+        Me.btnPrevious.Location = New System.Drawing.Point(282, 83)
         Me.btnPrevious.Name = "btnPrevious"
         Me.btnPrevious.Size = New System.Drawing.Size(169, 54)
         Me.btnPrevious.TabIndex = 0
-        Me.btnPrevious.Text = "Previous"
+        Me.btnPrevious.Text = "&Previous(Ctrl+P)"
         Me.btnPrevious.UseVisualStyleBackColor = True
         '
         'btnNext
         '
-        Me.btnNext.Location = New System.Drawing.Point(282, 88)
+        Me.btnNext.Location = New System.Drawing.Point(481, 83)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(164, 54)
         Me.btnNext.TabIndex = 1
-        Me.btnNext.Text = "Next"
+        Me.btnNext.Text = "&Next(Ctrl+N)"
         Me.btnNext.UseVisualStyleBackColor = True
         '
         'lblName
@@ -79,7 +79,7 @@ Partial Class ViewSubmissionsForm_vb
         'lblGitHub
         '
         Me.lblGitHub.AutoSize = True
-        Me.lblGitHub.Location = New System.Drawing.Point(278, 291)
+        Me.lblGitHub.Location = New System.Drawing.Point(278, 296)
         Me.lblGitHub.Name = "lblGitHub"
         Me.lblGitHub.Size = New System.Drawing.Size(57, 20)
         Me.lblGitHub.TabIndex = 5
@@ -88,7 +88,7 @@ Partial Class ViewSubmissionsForm_vb
         'lblStopwatch
         '
         Me.lblStopwatch.AutoSize = True
-        Me.lblStopwatch.Location = New System.Drawing.Point(278, 325)
+        Me.lblStopwatch.Location = New System.Drawing.Point(278, 331)
         Me.lblStopwatch.Name = "lblStopwatch"
         Me.lblStopwatch.Size = New System.Drawing.Size(57, 20)
         Me.lblStopwatch.TabIndex = 6

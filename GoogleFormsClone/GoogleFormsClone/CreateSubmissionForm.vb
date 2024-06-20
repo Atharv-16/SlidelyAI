@@ -2,6 +2,11 @@
     Private stopwatchTime As TimeSpan = TimeSpan.Zero
     Private stopwatchRunning As Boolean = False
 
+    Private Sub CreateSubmissionForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Ensure the form receives key events before they are passed to the controls
+        Me.KeyPreview = True
+    End Sub
+
     Private Sub btnStartStop_Click(sender As Object, e As EventArgs) Handles btnStartStop.Click
         If stopwatchRunning Then
             stopwatchTimer.Stop()
@@ -27,5 +32,11 @@
         Catch ex As Exception
             MessageBox.Show($"Error submitting form: {ex.Message}")
         End Try
+    End Sub
+
+    Private Sub CreateSubmissionForm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.Control AndAlso e.KeyCode = Keys.S Then
+            btnSubmit.PerformClick()
+        End If
     End Sub
 End Class

@@ -104,7 +104,7 @@ Partial Class CreateSubmissionForm
         '
         'btnStartStop
         '
-        Me.btnStartStop.Location = New System.Drawing.Point(262, 309)
+        Me.btnStartStop.Location = New System.Drawing.Point(112, 305)
         Me.btnStartStop.Name = "btnStartStop"
         Me.btnStartStop.Size = New System.Drawing.Size(126, 48)
         Me.btnStartStop.TabIndex = 8
@@ -113,7 +113,7 @@ Partial Class CreateSubmissionForm
         '
         'btnSubmit
         '
-        Me.btnSubmit.Location = New System.Drawing.Point(108, 309)
+        Me.btnSubmit.Location = New System.Drawing.Point(266, 305)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(125, 48)
         Me.btnSubmit.TabIndex = 9

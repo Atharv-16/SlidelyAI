@@ -28,20 +28,20 @@ Partial Class Form1
         '
         'btnViewSubmissions
         '
-        Me.btnViewSubmissions.Location = New System.Drawing.Point(453, 111)
+        Me.btnViewSubmissions.Location = New System.Drawing.Point(109, 133)
         Me.btnViewSubmissions.Name = "btnViewSubmissions"
         Me.btnViewSubmissions.Size = New System.Drawing.Size(265, 138)
         Me.btnViewSubmissions.TabIndex = 0
-        Me.btnViewSubmissions.Text = "View Submissions"
+        Me.btnViewSubmissions.Text = "&View Submissions(Ctrl+V)"
         Me.btnViewSubmissions.UseVisualStyleBackColor = True
         '
         'btnCreateSubmission
         '
-        Me.btnCreateSubmission.Location = New System.Drawing.Point(106, 111)
+        Me.btnCreateSubmission.Location = New System.Drawing.Point(424, 133)
         Me.btnCreateSubmission.Name = "btnCreateSubmission"
         Me.btnCreateSubmission.Size = New System.Drawing.Size(248, 138)
         Me.btnCreateSubmission.TabIndex = 1
-        Me.btnCreateSubmission.Text = "Create New Submission"
+        Me.btnCreateSubmission.Text = "&Create New Submission(Ctrl+C)"
         Me.btnCreateSubmission.UseVisualStyleBackColor = True
         '
         'Form1

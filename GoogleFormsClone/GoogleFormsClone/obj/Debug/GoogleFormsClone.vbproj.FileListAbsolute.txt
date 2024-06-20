@@ -15,3 +15,7 @@ C:\Users\Asus\source\repos\GoogleFormsClone\GoogleFormsClone\obj\Debug\GoogleFor
 C:\Users\Asus\source\repos\GoogleFormsClone\GoogleFormsClone\obj\Debug\GoogleFormsClone.pdb
 C:\Users\Asus\source\repos\GoogleFormsClone\GoogleFormsClone\bin\Debug\GoogleFormsClone.pdb
 C:\Users\Asus\source\repos\GoogleFormsClone\GoogleFormsClone\bin\Debug\GoogleFormsClone.xml
+C:\Users\Asus\source\repos\GoogleFormsClone\GoogleFormsClone\bin\Debug\GoogleFormsClone.exe.manifest
+C:\Users\Asus\source\repos\GoogleFormsClone\GoogleFormsClone\bin\Debug\GoogleFormsClone.application
+C:\Users\Asus\source\repos\GoogleFormsClone\GoogleFormsClone\obj\Debug\GoogleFormsClone.exe.manifest
+C:\Users\Asus\source\repos\GoogleFormsClone\GoogleFormsClone\obj\Debug\GoogleFormsClone.application
