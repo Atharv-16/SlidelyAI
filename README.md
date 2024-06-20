@@ -16,7 +16,7 @@ The backend is responsible for handling submissions and providing data to the fr
 1. Clone the repository:
 
    ```bash
-   git clone [https://github.com/your-username/your-repo.git](https://github.com/Atharv-16/SlidelyAI.git)
+   git clone https://github.com/Atharv-16/SlidelyAI.git
    cd slidely
 
 2. Build the Project
