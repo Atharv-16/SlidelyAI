@@ -20,12 +20,12 @@ The backend is responsible for handling submissions and providing data to the fr
    git clone https://github.com/your-username/your-repo.git
    cd slidely
 
-Build the Project
+2. Build the Project
 If necessary:
 ```bash
 npm run build
 ```
-Start the Server
+3. Start the Server
 ```bash
 npm start
 ```
