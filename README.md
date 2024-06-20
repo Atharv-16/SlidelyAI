@@ -28,8 +28,9 @@ The backend is responsible for handling submissions and providing data to the fr
    ```bash
    npm start
    ```
-The server will start running on http://localhost:3000.
 4. Open Setup
+The server will start running on http://localhost:3000.
+
 
 # Frontend (Visual Basic)
 The frontend app is built using Visual Basic and interacts with the backend API to display and manage form submissions.
