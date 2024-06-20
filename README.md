@@ -1,4 +1,4 @@
-# Google Forms Clone
+<img width="599" alt="backend" src="https://github.com/Atharv-16/SlidelyAI/assets/119600601/1f674f6d-fb20-431c-9e03-113ea7304a39"># Google Forms Clone
 
 This project is a simplified clone of Google Forms, consisting of a frontend built with Visual Basic and a backend built with Express.js.
 
@@ -40,3 +40,10 @@ GoogleFormsClone folder has been provided as the source code which can be open b
 ### Features
 - Create New Submission: Allows users to input Name, Email, Phone Number, GitHub repo link, and manage a stopwatch.
 - View Submissions: Navigate through all form entries and view details of each submission.
+
+## Results
+
+<img width="404" alt="form1" src="https://github.com/Atharv-16/SlidelyAI/assets/119600601/4de9804b-5b6d-4d7a-80ff-fd643865a124">
+<img width="830" alt="create" src="https://github.com/Atharv-16/SlidelyAI/assets/119600601/005464b2-d267-4be5-95ae-73724005d0f6"><img width="599" alt="backend" src="https://github.com/Atharv-16/SlidelyAI/assets/119600601/b394cbc1-1359-4da6-94ea-9aba53837358">
+<img width="828" alt="view" src="https://github.com/Atharv-16/SlidelyAI/assets/119600601/90a66f77-d2e6-49e1-aba4-9735eb4309f3">
+
